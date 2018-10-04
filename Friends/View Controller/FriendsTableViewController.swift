@@ -8,9 +8,17 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+class FriendsTableViewController: UITableViewController, UINavigationControllerDelegate {
     
     let friendController = FriendController()
+    let imageTransitionAnimator = ImageTransitionAnimator()
+    let navigationControllerDelegate = NavigationControllerDelagate()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.delegate = navigationControllerDelegate
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,6 +50,7 @@ class FriendsTableViewController: UITableViewController {
 
             let friend = friendController.friends[indexPath.row]
             destinationVC.friend = friend
+            navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath)
         }
     }
 }

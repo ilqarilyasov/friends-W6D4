@@ -11,10 +11,13 @@ import UIKit
 class NavigationControllerDelagate: NSObject, UINavigationControllerDelegate {
     
     var sourceCell: UITableViewCell?
+    let imageTransitionAnimator = ImageTransitionAnimator()
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        <#code#>
+        return imageTransitionAnimator
     }
     
     
-}
+    
+    
+}//end of class

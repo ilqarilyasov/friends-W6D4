@@ -10,7 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    let imageTransitionAnimator = ImageTransitionAnimator()
+    
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var bio: UILabel!
     
@@ -28,7 +30,7 @@ class DetailViewController: UIViewController {
         
         guard let friend = friend, isViewLoaded else { return }
         
-            imageView.image = friend.image
+            image.image = friend.image
             name.text = friend.name
             bio.text = friend.bio
     }
