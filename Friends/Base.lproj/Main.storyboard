@@ -12,7 +12,7 @@
         <!--Friends-->
         <scene sceneID="lF1-zY-xJH">
             <objects>
-                <tableViewController id="Vlg-cA-NAU" sceneMemberID="viewController">
+                <tableViewController id="Vlg-cA-NAU" customClass="FriendsTableViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cs5-sS-L8J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VE7-zd-ITS"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowSegue" id="VE7-zd-ITS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-1618" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +104,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bio" destination="nSn-40-tqC" id="gaJ-hW-qk8"/>
+                        <outlet property="imageView" destination="H2T-tI-UKL" id="LXy-C5-MZ6"/>
+                        <outlet property="name" destination="aAW-08-RKp" id="lq9-6u-g0H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

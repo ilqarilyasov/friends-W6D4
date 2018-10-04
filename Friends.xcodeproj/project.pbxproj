@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		8210E21B2166A7F9006469FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E21A2166A7F9006469FA /* AppDelegate.swift */; };
-		8210E21D2166A7F9006469FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E21C2166A7F9006469FA /* ViewController.swift */; };
 		8210E2202166A7F9006469FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8210E21E2166A7F9006469FA /* Main.storyboard */; };
 		8210E2222166A7F9006469FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8210E2212166A7F9006469FA /* Assets.xcassets */; };
 		8210E2252166A7F9006469FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8210E2232166A7F9006469FA /* LaunchScreen.storyboard */; };
 		8210E22E2166A971006469FA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E22D2166A971006469FA /* Friend.swift */; };
 		8210E2302166AA84006469FA /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E22F2166AA84006469FA /* FriendController.swift */; };
+		8210E2322166AEAE006469FA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2312166AEAE006469FA /* DetailViewController.swift */; };
+		8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2332166AED3006469FA /* FriendsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8210E2172166A7F9006469FA /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8210E21A2166A7F9006469FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8210E21C2166A7F9006469FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8210E21F2166A7F9006469FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8210E2212166A7F9006469FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8210E2242166A7F9006469FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8210E2262166A7F9006469FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8210E22D2166A971006469FA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		8210E22F2166AA84006469FA /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
+		8210E2312166AEAE006469FA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8210E2332166AED3006469FA /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				8210E22D2166A971006469FA /* Friend.swift */,
 				8210E22F2166AA84006469FA /* FriendController.swift */,
-				8210E21C2166A7F9006469FA /* ViewController.swift */,
+				8210E2332166AED3006469FA /* FriendsTableViewController.swift */,
+				8210E2312166AEAE006469FA /* DetailViewController.swift */,
 				8210E21E2166A7F9006469FA /* Main.storyboard */,
 				8210E22C2166A802006469FA /* Resources */,
 			);
@@ -151,8 +154,9 @@
 			files = (
 				8210E22E2166A971006469FA /* Friend.swift in Sources */,
 				8210E2302166AA84006469FA /* FriendController.swift in Sources */,
-				8210E21D2166A7F9006469FA /* ViewController.swift in Sources */,
+				8210E2322166AEAE006469FA /* DetailViewController.swift in Sources */,
 				8210E21B2166A7F9006469FA /* AppDelegate.swift in Sources */,
+				8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
