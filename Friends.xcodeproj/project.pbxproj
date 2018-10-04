@@ -54,14 +54,22 @@
 		8210E2192166A7F9006469FA /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				8210E21A2166A7F9006469FA /* AppDelegate.swift */,
 				8210E21C2166A7F9006469FA /* ViewController.swift */,
 				8210E21E2166A7F9006469FA /* Main.storyboard */,
+				8210E22C2166A802006469FA /* Resources */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		8210E22C2166A802006469FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8210E21A2166A7F9006469FA /* AppDelegate.swift */,
 				8210E2212166A7F9006469FA /* Assets.xcassets */,
 				8210E2232166A7F9006469FA /* LaunchScreen.storyboard */,
 				8210E2262166A7F9006469FA /* Info.plist */,
 			);
-			path = Friends;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Friends/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Friends/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Friends/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Friends/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
