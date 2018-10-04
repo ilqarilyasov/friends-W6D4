@@ -15,6 +15,7 @@
 		8210E2302166AA84006469FA /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E22F2166AA84006469FA /* FriendController.swift */; };
 		8210E2322166AEAE006469FA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2312166AEAE006469FA /* DetailViewController.swift */; };
 		8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2332166AED3006469FA /* FriendsTableViewController.swift */; };
+		8210E2362166B510006469FA /* NavigationControllerDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2352166B510006469FA /* NavigationControllerDelagate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8210E22F2166AA84006469FA /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 		8210E2312166AEAE006469FA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8210E2332166AED3006469FA /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		8210E2352166B510006469FA /* NavigationControllerDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelagate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,11 @@
 		8210E2192166A7F9006469FA /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				8210E22D2166A971006469FA /* Friend.swift */,
-				8210E22F2166AA84006469FA /* FriendController.swift */,
-				8210E2332166AED3006469FA /* FriendsTableViewController.swift */,
-				8210E2312166AEAE006469FA /* DetailViewController.swift */,
-				8210E21E2166A7F9006469FA /* Main.storyboard */,
+				8210E2372166B519006469FA /* Model */,
+				8210E2382166B51E006469FA /* Model Controller */,
+				8210E2392166B528006469FA /* View Controller */,
+				8210E2352166B510006469FA /* NavigationControllerDelagate.swift */,
+				8210E23A2166B538006469FA /* Storyboard */,
 				8210E22C2166A802006469FA /* Resources */,
 			);
 			path = Friends;
@@ -79,6 +81,39 @@
 				8210E2262166A7F9006469FA /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8210E2372166B519006469FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8210E22D2166A971006469FA /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8210E2382166B51E006469FA /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8210E22F2166AA84006469FA /* FriendController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		8210E2392166B528006469FA /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8210E2332166AED3006469FA /* FriendsTableViewController.swift */,
+				8210E2312166AEAE006469FA /* DetailViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		8210E23A2166B538006469FA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8210E21E2166A7F9006469FA /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +191,7 @@
 				8210E2302166AA84006469FA /* FriendController.swift in Sources */,
 				8210E2322166AEAE006469FA /* DetailViewController.swift in Sources */,
 				8210E21B2166A7F9006469FA /* AppDelegate.swift in Sources */,
+				8210E2362166B510006469FA /* NavigationControllerDelagate.swift in Sources */,
 				8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
