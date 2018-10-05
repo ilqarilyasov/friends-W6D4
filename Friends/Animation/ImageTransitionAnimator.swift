@@ -20,7 +20,7 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning, 
     }
         
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning){
-        guard let fromVC = transitionContext.viewController(forKey: .from) as? FriendsTableViewController,
+        guard let fromView = transitionContext.view(forKey: .from) as? FriendTableViewCell,
             let toVC = transitionContext.viewController(forKey: .to) as? DetailViewController,
             let toView = transitionContext.view(forKey: .to) else { return }
 
@@ -31,13 +31,10 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning, 
         toView.frame = fromViewEndFrame
         toView.alpha = 0.0
 
-        // Get tapped cell from pretentedVC
-        guard let indexPath = fromVC.tableView.indexPathForSelectedRow else { return }
-            let fromCell = fromVC.tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
 
         // Get image and label of the cell. Make the invisible
-        guard let fromImage = fromCell.imageView,
-            let fromName = fromCell.textLabel else { return }
+        guard let fromImage = fromView.imageView,
+            let fromName = fromView.name else { return }
         fromImage.alpha = 0.0
         fromName.alpha = 0.0
 

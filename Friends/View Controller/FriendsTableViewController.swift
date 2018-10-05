@@ -79,7 +79,7 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
         if segue.identifier == "ShowSegue" {
             guard let destinationVC = segue.destination as? DetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow else { return }
-
+            
             let friend = friendController.friends[indexPath.row]
             destinationVC.friend = friend
             navigationControllerDelegate?.sourceCell = tableView.cellForRow(at: indexPath)
