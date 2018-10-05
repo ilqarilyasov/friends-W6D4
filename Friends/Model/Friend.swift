@@ -11,13 +11,13 @@ import UIKit
 class Friend {
     
     let name: String
-    let image: UIImage
+    let friendImage: UIImage
     let bio: String
-    var hasShown: Bool // For cell animation
+    var hasShown: Bool // For cell scroll animation
     
     init(name: String, image: UIImage, bio: String, hasShown: Bool = false) {
         self.name = name
-        self.image = image
+        self.friendImage = image
         self.bio = bio
         self.hasShown = hasShown
     }

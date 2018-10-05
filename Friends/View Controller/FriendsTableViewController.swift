@@ -13,8 +13,9 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
     // MARK: - Properties
     
     let friendController = FriendController()
-    let imageTransitionAnimator = ImageTransitionAnimator()
     var navigationControllerDelegate: NavigationControllerDelagate?
+    var imageTransitionAnimator: ImageTransitionAnimator?
+    var transitionImage: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +34,17 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendTableViewCell else { return UITableViewCell()}
+        
         let friend = friendController.friends[indexPath.row]
         
-        cell.textLabel?.text = friend.name
-        cell.imageView?.image = friend.image
+        cell.friendImage.image = friend.friendImage
+        cell.name.text = friend.name
         
         return cell
     }
 
-    // MARK: - Animate the cell
+    // MARK: - Animate the cell when scrolling
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let friend = friendController.friends[indexPath.row]
@@ -58,6 +60,19 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
             friend.hasShown = true
         }
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath) as? FriendTableViewCell
+        transitionImage = cell?.friendImage
+        
+        let detailVC = DetailViewController()
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

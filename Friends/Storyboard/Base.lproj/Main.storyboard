@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="81" id="5jR-fo-G7W">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="81" id="5jR-fo-G7W" customClass="FriendTableViewCell" customModule="Friends" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5jR-fo-G7W" id="GaM-3d-hXT">
@@ -52,6 +52,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="friendImage" destination="wpb-p7-8xa" id="WJ3-D1-sMW"/>
+                                    <outlet property="name" destination="Fx2-gi-dNs" id="UeQ-Sx-ewj"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowSegue" id="VE7-zd-ITS"/>
                                 </connections>
                             </tableViewCell>
@@ -125,7 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="bio" destination="nSn-40-tqC" id="gaJ-hW-qk8"/>
-                        <outlet property="image" destination="H2T-tI-UKL" id="LXy-C5-MZ6"/>
+                        <outlet property="friendImage" destination="H2T-tI-UKL" id="LXy-C5-MZ6"/>
                         <outlet property="name" destination="aAW-08-RKp" id="lq9-6u-g0H"/>
                     </connections>
                 </viewController>
