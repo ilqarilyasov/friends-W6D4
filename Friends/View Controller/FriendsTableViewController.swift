@@ -13,13 +13,13 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
     // MARK: - Properties
     
     let friendController = FriendController()
-    var navigationControllerDelegate: CustomNavigationController?
+    //var navigationControllerDelegate: CustomNavigationController?
     var imageTransitionAnimator: ImageTransitionAnimator?
     var transitionImage: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.delegate = navigationControllerDelegate
+        //navigationController?.delegate = navigationControllerDelegate
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +82,7 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
             
             let friend = friendController.friends[indexPath.row]
             destinationVC.friend = friend
-            navigationControllerDelegate?.sourceCell = tableView.cellForRow(at: indexPath)
+//            navigationControllerDelegate?.sourceCell = tableView.cellForRow(at: indexPath)
         }
     }
 }

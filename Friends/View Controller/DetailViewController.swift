@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    let imageTransitionAnimator = ImageTransitionAnimator()
+    let imageTransitionAnimator = ImageTransitionAnimator(presenting: true)
     
     @IBOutlet weak var friendImage: UIImageView!
     @IBOutlet weak var name: UILabel!
