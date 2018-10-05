@@ -7,29 +7,44 @@
 //
 
 import UIKit
-
+// 1
 class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning, UINavigationControllerDelegate {
-    
+
     private let duration: TimeInterval = 0.5
     var operation: UINavigationController.Operation = .push
+    private let presenting: Bool     // 2. Whether the transition is happening to present a VC or remove one
     var image: UIImage?
     var name: String?
     
+    init(presenting: Bool) {
+        self.presenting = presenting
+    }
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return duration
+        return duration // 3
     }
         
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning){
+        // 4. To get the view we're animating we need view(forKey:)
+        // If you need to access the VC to communicate with it you can use viewController(forKey:)
         guard let fromView = transitionContext.view(forKey: .from) as? FriendTableViewCell,
             let toVC = transitionContext.viewController(forKey: .to) as? DetailViewController,
             let toView = transitionContext.view(forKey: .to) else { return }
 
         // Create a container superview and set it's frame
+        // 5. Setting Initial state of the animation
+        // And it's also our responsibility to add the toView to the view hierarchy
         let containerView = transitionContext.containerView
+        if presenting {
+            containerView.addSubview(toView)
+            toView.alpha = 0.0
+        } else {
+            containerView.insertSubview(toView, belowSubview: fromView)
+        }
+        
+        
         let fromViewEndFrame = transitionContext.finalFrame(for: toVC)
-        containerView.addSubview(toView)
         toView.frame = fromViewEndFrame
-        toView.alpha = 0.0
 
 
         // Get image and label of the cell. Make the invisible
@@ -60,17 +75,39 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning, 
         toView.layoutIfNeeded()
 
         UIView.animate(withDuration: duration, animations: {
+            // 6. We set final state of the animation
+            // We simply fade in toView or fade out fromView
+            // But this could be anything animatable
+            if self.presenting {
+                toView.alpha = 1.0
+            } else {
+                fromView.alpha = 0.0
+            }
+            
             let imageEndFrame = containerView.convert(toImage.bounds, from: toImage)
             let nameEndFrame = containerView.convert(toName.bounds, from: toName)
             animatedImage.frame = imageEndFrame
             animatedName.frame = nameEndFrame
-            toView.alpha = 0.0
         }) { (_) in
+            // 7. When animation is complete there are a few things lefts to do.
+            // First if transition cancelled, we are responsible for undoing any changes
+            // So remove the toView from view hierarchy
+            // Second we must call completeTransition to let the context know that we have finished animating
+            // Now how do we let iOS know to use this animation instead of the default one?
+            // For that we need to implement a method in UINavigationControllerDelegate called
+            // navigationController(_:animationControllerFor:from:to:)
+            // A simple way to achieve this to subclass UINavigationController and set its delegate to itself
+            let success = !transitionContext.transitionWasCancelled
+            
+            if !success {
+                toView.removeFromSuperview()
+            }
+            transitionContext.completeTransition(success)
+
             toImage.alpha = 1.0
             fromImage.alpha = 1.0
             toName.alpha = 1.0
             fromName.alpha = 1.0
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }
     

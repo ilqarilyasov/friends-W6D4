@@ -13,7 +13,7 @@ class FriendsTableViewController: UITableViewController, UINavigationControllerD
     // MARK: - Properties
     
     let friendController = FriendController()
-    var navigationControllerDelegate: NavigationControllerDelagate?
+    var navigationControllerDelegate: CustomNavigationController?
     var imageTransitionAnimator: ImageTransitionAnimator?
     var transitionImage: UIImageView?
     

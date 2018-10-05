@@ -18,6 +18,7 @@
 		8210E2362166B510006469FA /* NavigationControllerDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2352166B510006469FA /* NavigationControllerDelagate.swift */; };
 		8210E23C2166B673006469FA /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E23B2166B673006469FA /* ImageTransitionAnimator.swift */; };
 		8210E23F2166FA95006469FA /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E23E2166FA95006469FA /* FriendTableViewCell.swift */; };
+		82C255492167AA6B007FD31E /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C255482167AA6B007FD31E /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8210E2352166B510006469FA /* NavigationControllerDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelagate.swift; sourceTree = "<group>"; };
 		8210E23B2166B673006469FA /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 		8210E23E2166FA95006469FA /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		82C255482167AA6B007FD31E /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8210E2352166B510006469FA /* NavigationControllerDelagate.swift */,
+				82C255482167AA6B007FD31E /* CustomNavigationController.swift */,
 				8210E23B2166B673006469FA /* ImageTransitionAnimator.swift */,
 			);
 			path = Animation;
@@ -212,6 +215,7 @@
 				8210E22E2166A971006469FA /* Friend.swift in Sources */,
 				8210E2302166AA84006469FA /* FriendController.swift in Sources */,
 				8210E2322166AEAE006469FA /* DetailViewController.swift in Sources */,
+				82C255492167AA6B007FD31E /* CustomNavigationController.swift in Sources */,
 				8210E21B2166A7F9006469FA /* AppDelegate.swift in Sources */,
 				8210E2362166B510006469FA /* NavigationControllerDelagate.swift in Sources */,
 				8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */,
