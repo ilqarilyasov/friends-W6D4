@@ -17,6 +17,7 @@
 		8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2332166AED3006469FA /* FriendsTableViewController.swift */; };
 		8210E2362166B510006469FA /* NavigationControllerDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E2352166B510006469FA /* NavigationControllerDelagate.swift */; };
 		8210E23C2166B673006469FA /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E23B2166B673006469FA /* ImageTransitionAnimator.swift */; };
+		8210E23F2166FA95006469FA /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210E23E2166FA95006469FA /* FriendTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8210E2332166AED3006469FA /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		8210E2352166B510006469FA /* NavigationControllerDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelagate.swift; sourceTree = "<group>"; };
 		8210E23B2166B673006469FA /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
+		8210E23E2166FA95006469FA /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		8210E2192166A7F9006469FA /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				8210E2402166FA98006469FA /* View */,
 				8210E2372166B519006469FA /* Model */,
 				8210E2382166B51E006469FA /* Model Controller */,
 				8210E2392166B528006469FA /* View Controller */,
@@ -125,6 +128,14 @@
 				8210E23B2166B673006469FA /* ImageTransitionAnimator.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		8210E2402166FA98006469FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8210E23E2166FA95006469FA /* FriendTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				8210E2362166B510006469FA /* NavigationControllerDelagate.swift in Sources */,
 				8210E2342166AED3006469FA /* FriendsTableViewController.swift in Sources */,
 				8210E23C2166B673006469FA /* ImageTransitionAnimator.swift in Sources */,
+				8210E23F2166FA95006469FA /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

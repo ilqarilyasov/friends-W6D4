@@ -13,11 +13,13 @@ class Friend {
     let name: String
     let image: UIImage
     let bio: String
+    var hasShown: Bool // For cell animation
     
-    init(name: String, image: UIImage, bio: String) {
+    init(name: String, image: UIImage, bio: String, hasShown: Bool = false) {
         self.name = name
         self.image = image
         self.bio = bio
+        self.hasShown = hasShown
     }
     
 }

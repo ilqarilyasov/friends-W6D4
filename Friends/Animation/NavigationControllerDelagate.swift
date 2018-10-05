@@ -17,7 +17,11 @@ class NavigationControllerDelagate: NSObject, UINavigationControllerDelegate {
         return imageTransitionAnimator
     }
     
-    
+    private func setupAnimator(for operation: UINavigationController) {
+     
+        
+        
+    }
     
     
 }//end of class
